@@ -22,6 +22,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 export const viewport = {
 	width: 'device-width',
 	initialScale: 1,
-	viewportFit: 'cover', // accounts for iOS safe areas
+	viewportFit: 'cover',
   }
-  
