@@ -9,8 +9,7 @@ const base = process.env.NEXT_BASE_PATH ?? (isPages && repo ? `/${repo}` : '')
 
 export default {
   output: 'export',
-  images: { unoptimized: true },
-  trailingSlash: true,
-  basePath: base || undefined,
-  assetPrefix: base ? `${base}/` : undefined,
-}
+  images: { unoptimized: true }, // if using next/image
+  assetPrefix: '',
+  basePath: '', // custom domain at root
+};
