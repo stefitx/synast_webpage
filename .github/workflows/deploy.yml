@@ -57,7 +57,7 @@ uses: actions/deploy-pages@v4
         env:
           GITHUB_PAGES: 'true'
           GITHUB_REPOSITORY: ${{ github.repository }}
-          NEXT_BASE_PATH: ''   # <—— empty for custom domain
+          NEXT_BASE_PATH: 'https://www.synastdigital.com'
         run: |
           npm run build
           npm run export
