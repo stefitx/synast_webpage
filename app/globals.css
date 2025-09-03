@@ -17,7 +17,7 @@ body { @apply font-sans text-ink-900 bg-white antialiased; }
 html, body { height: 100%; }
 body { @apply text-ink-900 bg-white antialiased; }
 
-.container { @apply max-w-container mx-auto px-6; }
+.container { @apply max-w-container mx-auto px-4 md:px-6; }
 
 .btn { @apply inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold shadow-soft transition; }
 .btn-primary { @apply bg-blue-700 text-white hover:shadow-lift; }

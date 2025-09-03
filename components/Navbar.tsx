@@ -9,21 +9,20 @@ export default function Navbar() {
   const base = isRO ? '/ro' : ''
 
   const labels = isRO
-    ? { services: 'Servicii', process: 'Proces', results: 'Rezultate', about: 'Despre', cta: 'Programează un audit gratuit', langToggle: 'EN' }
-    : { services: 'Services', process: 'Process', results: 'Results', about: 'About', cta: 'Book a free audit', langToggle: 'RO' }
+    ? { services: 'Servicii', process: 'Proces', results: 'Rezultate', about: 'Despre', ctaLong: 'Programează un audit gratuit', ctaShort: 'Audit gratuit' }
+    : { services: 'Services', process: 'Process', results: 'Results', about: 'About', ctaLong: 'Book a free audit', ctaShort: 'Free audit' }
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-white/60">
-      {/* 3 columns: left logo, center nav, right CTA/language */}
-      <div className="container grid h-16 grid-cols-3 items-center">
-        {/* Left: Logo + wordmark */}
+    <header className="sticky top-0 z-50 bg-white/75 backdrop-blur border-b border-black/5">
+      {/* Flex on mobile, 3-col grid from md up so links stay centered */}
+      <div className="container flex h-14 items-center justify-between md:grid md:h-16 md:grid-cols-3">
+        {/* Left: logo */}
         <Link href={`${base || '/'}`} className="flex items-center gap-3 font-semibold">
-          {/* 🔵 Make logo bigger: bump width/height to 28 (or 32 if you want) */}
-          <Image src="/logo.png" alt="Synast Digital" width={28} height={28} className="rounded-sm" priority />
-          <span className="text-lg">Synast Digital</span>
+          <Image src="/logo.png" alt="Synast Digital" width={26} height={26} className="rounded-sm" priority />
+          <span className="text-base md:text-lg">Synast Digital</span>
         </Link>
 
-        {/* Center: section links that work from any route */}
+        {/* Center: nav (hidden on mobile) */}
         <nav className="hidden md:flex justify-center gap-6">
           <Link href={`${base}/#services`} className="footer-link">{labels.services}</Link>
           <Link href={`${base}/#process`} className="footer-link">{labels.process}</Link>
@@ -31,10 +30,19 @@ export default function Navbar() {
           <Link href={`${base}/#about`} className="footer-link">{labels.about}</Link>
         </nav>
 
-        {/* Right: CTA + language toggle */}
-        <div className="flex justify-end items-center gap-3">
-          <Link href={`${base}/contact`} className="btn btn-primary">{labels.cta}</Link>
-          <Link href={isRO ? '/' : '/ro'} className="footer-link">{labels.langToggle}</Link>
+        {/* Right: compact CTA + language */}
+        <div className="flex items-center gap-2 md:gap-3 justify-end">
+          <Link
+            href={`${base}/contact/`}
+            className="btn btn-primary whitespace-nowrap rounded-xl px-3 py-2 text-sm md:rounded-2xl md:px-5 md:py-3 md:text-base"
+          >
+            {/* Short label on small screens, long label from sm+ */}
+            <span className="sm:hidden">{labels.ctaShort}</span>
+            <span className="hidden sm:inline">{labels.ctaLong}</span>
+          </Link>
+          <Link href={isRO ? '/' : '/ro/'} className="footer-link text-sm md:text-base">
+            {isRO ? 'EN' : 'RO'}
+          </Link>
         </div>
       </div>
     </header>
