@@ -8,8 +8,8 @@ type SectionProps = React.PropsWithChildren<{
 
 export default function Section({ id, alt = false, className = '', children }: SectionProps) {
   return (
-    // add scroll-mt classes
 <section id={id} className={`${alt ? 'section-alt' : 'section'} scroll-mt-24 md:scroll-mt-28 ${className}`}>
+
 
       <div className="container">{children}</div>
     </section>

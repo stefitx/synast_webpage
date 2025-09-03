@@ -2,6 +2,7 @@ import Section from '@/components/Section'
 import Testimonial from '@/components/Testimonial'
 import { Metric } from '@/components/Metrics'
 import Link from 'next/link'
+import Pillar from '@/components/Pillar'
 
 export default function HomePage() {
   return (
@@ -24,39 +25,33 @@ export default function HomePage() {
       </Section>
 
 {/* Services */}
-<Section id="services">
-  <h2 className="text-3xl font-semibold text-blue-900">Marketing & Brand Growth</h2>
-  <div className="mt-6 grid gap-6 md:grid-cols-3">
-    {[
-      { title: 'Brand identity & guidelines', desc: 'Naming, ton, paletă, guideline vizual.' },
-      { title: 'Website care convertește', desc: 'Site rapid, clar, cu formulare/booking și integrare analytics.' },
-      { title: 'Social media & conținut', desc: 'Strategie, calendare, content engine, raportare.' },
-      { title: 'Campanii plătite', desc: 'Google/Meta — de la setup la optimizare pe obiective.' },
-      { title: 'Email & lead nurturing', desc: 'Automatizări simple pentru activarea și retenția leadurilor.' },
-      { title: 'Măsurare & optimizare', desc: 'KPI dashboard și teste iterative pentru creștere.' },
-    ].map(s => (
-      <div key={s.title} className="card card-hover p-6">
-        <div className="text-xl font-semibold">{s.title}</div>
-        <p className="mt-2 text-ink-600">{s.desc}</p>
-      </div>
-    ))}
-  </div>
 
-  <h3 className="mt-12 text-2xl font-semibold text-blue-900">Automation & Digitalization</h3>
-  <div className="mt-6 grid gap-6 md:grid-cols-3">
-    {[
-      { title: 'Process automation', desc: 'Eliminăm taskurile repetitive cu no/low-code sau tooluri custom.' },
-      { title: 'Operations dashboards', desc: 'Vânzări/finanțe/proiecte în timp real, decizii în minute.' },
-      { title: 'Data pipelines', desc: 'Curățare, integrare și sincronizare date între sisteme.' },
-      { title: 'SME systems audit', desc: 'Audit structurat care găsește top 3 quick wins în 30 de zile.' },
-      { title: 'Training & SOPs', desc: 'Implementare, training, documentație ca schimbarea să rămână.' },
-      { title: 'Web integrations', desc: 'Plăți, CRM, ERP, e-mail — conectate corect.' },
-    ].map(s => (
-      <div key={s.title} className="card card-hover p-6">
-        <div className="text-xl font-semibold">{s.title}</div>
-        <p className="mt-2 text-ink-600">{s.desc}</p>
-      </div>
-    ))}
+
+<Section id="services">
+  <div className="grid gap-8 md:grid-cols-2 items-stretch">
+    <Pillar
+      title="Marketing & Brand Growth"
+      items={[
+        { title: 'Brand identity & guidelines', desc: 'Naming, tone, palette, visual guidelines.' },
+        { title: 'Website that converts', desc: 'Fast, clear site with booking/forms and analytics integration.' },
+        { title: 'Social media & content', desc: 'Strategy, calendar, content engine, reporting.' },
+        { title: 'Paid campaigns', desc: 'Google/Meta — from setup to objective-based optimization.' },
+        { title: 'Email & lead nurturing', desc: 'Simple automations to activate and retain leads.' },
+        { title: 'Measurement & optimization', desc: 'KPI dashboard and iterative testing for growth.' },
+      ]}
+    />
+
+    <Pillar
+      title="Automation & Digitalization"
+      items={[
+        { title: 'Process automation', desc: 'Eliminate repetitive tasks with no/low-code or custom tools.' },
+        { title: 'Operations dashboards', desc: 'Sales/finance/projects live — decide in minutes.' },
+        { title: 'Data pipelines', desc: 'Clean, integrate and sync data across systems.' },
+        { title: 'SME systems audit', desc: 'Structured audit that finds the top 3 quick wins in 30 days.' },
+        { title: 'Training & SOPs', desc: 'Implementation, training, documentation so change sticks.' },
+        { title: 'Web integrations', desc: 'Payments, CRM, ERP, email — connected correctly.' },
+      ]}
+    />
   </div>
 </Section>
 

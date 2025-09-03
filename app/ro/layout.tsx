@@ -15,14 +15,8 @@ const roLabels = {
   cta: 'Programează un audit gratuit',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="ro">
-      <body className="font-sans">
-        <Navbar base="/ro" labels={roLabels} />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  )
-}
+export default function RoLayout({ children }: { children: React.ReactNode }) {
+	// No <html> or <body> here; the root layout already provides them.
+	// We also don't render Navbar/Footer here—root layout will do that for both locales.
+	return <main lang="ro">{children}</main>;
+  }
