@@ -2,10 +2,6 @@
 /node_modules
 
 
-# production
-/out
-/.next
-
 
 # misc
 .DS_Store
