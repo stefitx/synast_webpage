@@ -13,7 +13,7 @@ export default function Navbar() {
     : { services: 'Services', process: 'Process', results: 'Results', about: 'About', ctaLong: 'Book a free audit', ctaShort: 'Free audit' }
 
   return (
-    <header className="sticky top-0 z-50 bg-white/75 backdrop-blur border-b border-black/5">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/5 pt-[env(safe-area-inset-top)]">
       {/* Flex on mobile, 3-col grid from md up so links stay centered */}
       <div className="container flex h-14 items-center justify-between md:grid md:h-16 md:grid-cols-3">
         {/* Left: logo */}
