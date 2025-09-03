@@ -420,6 +420,7 @@ video {
  .container{ max-width: 1280px; } }
 @media (min-width: 1536px){
  .container{ max-width: 1536px; } }
+.visible{ visibility: visible; }
 .fixed{ position: fixed; }
 .sticky{ position: sticky; }
 .inset-0{ inset: 0px; }
@@ -567,6 +568,7 @@ body { font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, 
  .sm\:grid-cols-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 @media (min-width: 768px){
+ .md\:inline{ display: inline; }
  .md\:flex{ display: flex; }
  .md\:inline-flex{ display: inline-flex; }
  .md\:grid{ display: grid; }
