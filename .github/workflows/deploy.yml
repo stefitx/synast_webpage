@@ -53,3 +53,12 @@ steps:
 - name: Deploy to GitHub Pages
 id: deployment
 uses: actions/deploy-pages@v4
+      - name: Build & Export
+        env:
+          GITHUB_PAGES: 'true'
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          NEXT_BASE_PATH: ''   # <—— empty for custom domain
+        run: |
+          npm run build
+          npm run export
+          touch out/.nojekyll
