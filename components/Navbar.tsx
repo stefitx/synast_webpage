@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="container flex items-center justify-between py-2 md:grid md:grid-cols-3 md:py-3">
         {/* Left: logo + wordmark */}
         <Link href={`${base || '/'}`} className="flex items-center gap-3 font-semibold">
-          <Image src="/logo.svg" alt="Synast Digital" width={26} height={26} className="rounded-sm" priority />
+          <Image src="/logo.png" alt="Synast Digital" width={26} height={26} className="rounded-sm" priority />
           <span className="text-base md:text-lg">Synast Digital</span>
         </Link>
 
