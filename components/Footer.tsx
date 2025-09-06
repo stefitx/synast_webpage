@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="container grid gap-8 md:grid-cols-3">
         <div>
           <div className="font-semibold">Synast Digital SRL</div>
-          <p className="mt-2 text-ink-600">Automation & digitalization for SMEs.</p>
+          <p className="mt-2 text-ink-600">Branding, marketing, automation & digitalization.</p>
         </div>
         <div className="space-y-2">
           <div className="font-semibold">{labels.company}</div>
@@ -32,7 +32,7 @@ export default function Footer() {
           <span className="footer-link block">Craiova · Barcelona</span>
         </div>
       </div>
-      <div className="container mt-10 border-t pt-6 text-sm text-ink-600">© {new Date().getFullYear()} Synast Digital SRL</div>
+      <div className="container mt-10 border-t pt-6 text-sm text-ink-600">© {new Date().getFullYear()} Synast Digital</div>
     </footer>
   )
 }
