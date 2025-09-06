@@ -35,10 +35,10 @@ export default function ContactRO() {
               <textarea required name="message" rows={5} className="mt-1 w-full rounded-2xl border px-4 py-3" placeholder="Spune-ne pe scurt despre obiectivele tale" />
             </div>
 
-            <label className="flex items-start gap-2 text-sm text-ink-600">
-              <input required type="checkbox" name="consent" className="mt-1" />
-              Sunt de acord cu <a className="underline" href="/privacy/">Politica de confidențialitate</a>.
-            </label>
+			<label className="flex items-start gap-2 text-sm text-ink-600">
+			<input required type="checkbox" name="consent" className="mt-1" />
+			Sunt de acord cu <a className="underline" href="/ro/privacy/">Politica de confidențialitate</a>.
+			</label>
 
             <button className="btn btn-primary" type="submit">Trimite</button>
           </form>

@@ -1,5 +1,19 @@
+'use client'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
 export default function Footer() {
+  const pathname = usePathname()
+  const isRO = pathname.startsWith('/ro')
+  const base = isRO ? '/ro' : ''
+
+  const labels = {
+    company: isRO ? 'Companie' : 'Company',
+    contact: 'Contact',
+    privacy: isRO ? 'Confidențialitate' : 'Privacy',
+    getInTouch: isRO ? 'Contact' : 'Get in touch',
+  }
+
   return (
     <footer className="section-alt">
       <div className="container grid gap-8 md:grid-cols-3">
@@ -8,12 +22,12 @@ export default function Footer() {
           <p className="mt-2 text-ink-600">Automation & digitalization for SMEs.</p>
         </div>
         <div className="space-y-2">
-          <div className="font-semibold">Company</div>
-          <Link href="/contact" className="footer-link block">Contact</Link>
-          <Link href="/privacy" className="footer-link block">Privacy</Link>
+          <div className="font-semibold">{labels.company}</div>
+          <Link href={`${base}/contact/`} className="footer-link block">{labels.contact}</Link>
+          <Link href={`${base}/privacy/`} className="footer-link block">{labels.privacy}</Link>
         </div>
         <div className="space-y-2">
-          <div className="font-semibold">Get in touch</div>
+          <div className="font-semibold">{labels.getInTouch}</div>
           <a className="footer-link block" href="mailto:hello@synastdigital.com">hello@synastdigital.com</a>
           <span className="footer-link block">Craiova · Barcelona</span>
         </div>
