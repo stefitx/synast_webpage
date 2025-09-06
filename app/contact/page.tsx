@@ -1,62 +1,18 @@
-'use client'
 import Section from '@/components/Section'
+import ContactForm from '@/components/ContactForm'
 
 export const metadata = { title: 'Contact — Synast Digital' }
 
-export default function ContactRO() {
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    const fd = new FormData(e.currentTarget)
-
-    const res = await fetch('https://formspree.io/f/mrbaogln', {
-      method: 'POST',
-      body: fd,
-      headers: { Accept: 'application/json' }, // ask Formspree for JSON response
-    })
-
-    if (res.ok) {
-      e.currentTarget.reset()
-      window.location.href = '/ro/contact/sent/'
-    } else {
-      // Optional: nicer error handling
-      const data = await res.json().catch(() => ({}))
-      alert(data.errors?.[0]?.message ?? 'A apărut o problemă. Încearcă din nou.')
-    }
-  }
-
+export default function ContactEN() {
   return (
     <main>
       <Section>
         <div className="mx-auto max-w-xl">
           <h1 className="text-4xl font-semibold text-blue-900">Contact</h1>
           <p className="mt-3 text-ink-600">
-            Sau scrie-ne direct la <a className="underline" href="mailto:hello@synastdigital.com">hello@synastdigital.com</a>.
+            Prefer email? Send us a note at <a className="underline" href="mailto:hello@synastdigital.com">hello@synastdigital.com</a>.
           </p>
-
-          <form onSubmit={onSubmit} className="mt-8 space-y-4">
-            <input type="hidden" name="_subject" value="Mesaj nou — Synast Digital" />
-            <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-
-            <div>
-              <label className="block text-sm font-medium">Nume</label>
-              <input required name="name" className="mt-1 w-full rounded-2xl border px-4 py-3" placeholder="Numele tău" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium">Email</label>
-              <input required type="email" name="email" className="mt-1 w-full rounded-2xl border px-4 py-3" placeholder="tu@exemplu.com" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium">Mesaj</label>
-              <textarea required name="message" rows={5} className="mt-1 w-full rounded-2xl border px-4 py-3" placeholder="Spune-ne pe scurt despre obiectivele tale" />
-            </div>
-
-            <label className="flex items-start gap-2 text-sm text-ink-600">
-              <input required type="checkbox" name="consent" className="mt-1" />
-              Sunt de acord cu <a className="underline" href="/ro/privacy/">Politica de confidențialitate</a>.
-            </label>
-
-            <button className="btn btn-primary" type="submit">Trimite</button>
-          </form>
+          <ContactForm locale="en" />
         </div>
       </Section>
     </main>
