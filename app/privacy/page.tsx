@@ -9,11 +9,11 @@ export default function Privacy() {
       <Section>
         <div className="mx-auto max-w-3xl">
           <h1 className="text-4xl font-semibold text-blue-900">Privacy Policy</h1>
-          <p className="mt-4 text-ink-600">This policy explains what personal data Synast Digital SRL ("Synast", "we") collects, how we use it, and the rights you have under the GDPR. It applies to <strong>synastdigital.com</strong> and our contact channels.</p>
+          <p className="mt-4 text-ink-600">This policy explains what personal data Synast Digital ("Synast", "we") collects, how we use it, and the rights you have under the GDPR. It applies to <strong>synastdigital.com</strong> and our contact channels.</p>
 
           <h2 className="mt-10 text-2xl font-semibold text-blue-900">Data Controller</h2>
           <p className="mt-2 text-ink-600">
-            Synast Digital SRL — Craiova, Romania · Email: <a className="underline" href="mailto:hello@synastdigital.com">hello@synastdigital.com</a>
+            Synast Digital — Craiova, Romania · Email: <a className="underline" href="mailto:hello@synastdigital.com">hello@synastdigital.com</a>
           </p>
 
           <h2 className="mt-10 text-2xl font-semibold text-blue-900">Data we collect</h2>

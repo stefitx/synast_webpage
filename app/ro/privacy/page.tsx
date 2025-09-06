@@ -9,10 +9,10 @@ export default function PrivacyRO() {
       <Section>
         <div className="mx-auto max-w-3xl">
           <h1 className="text-4xl font-semibold text-blue-900">Politica de confidențialitate</h1>
-          <p className="mt-4 text-ink-600">Această politică explică ce date personale colectează Synast Digital SRL („Synast”, „noi”), cum le folosim și ce drepturi aveți conform GDPR. Se aplică pentru <strong>synastdigital.com</strong> și canalele noastre de contact.</p>
+          <p className="mt-4 text-ink-600">Această politică explică ce date personale colectează Synast Digital („Synast”, „noi”), cum le folosim și ce drepturi aveți conform GDPR. Se aplică pentru <strong>synastdigital.com</strong> și canalele noastre de contact.</p>
 
           <h2 className="mt-10 text-2xl font-semibold text-blue-900">Operatorul de date</h2>
-          <p className="mt-2 text-ink-600">Synast Digital SRL — Craiova, România · Email: <a className="underline" href="mailto:hello@synastdigital.com">hello@synastdigital.com</a></p>
+          <p className="mt-2 text-ink-600">Synast Digital — Craiova, România · Email: <a className="underline" href="mailto:hello@synastdigital.com">hello@synastdigital.com</a></p>
 
           <h2 className="mt-10 text-2xl font-semibold text-blue-900">Ce date colectăm</h2>
           <ul className="mt-2 list-disc pl-6 text-ink-600 space-y-2">
