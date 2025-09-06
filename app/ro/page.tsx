@@ -10,61 +10,142 @@ export default function HomePage() {
       {/* Hero */}
       <Section className="pt-24">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="badge">Built in Romania · Premium, minimal</span>
+          <span className="badge">Investiție inițială mică. Ne plătești când ești mulțumit(ă).</span>
           <h1 className="mt-4 text-5xl font-semibold tracking-tight text-blue-900">
-            Automation & digitalization for forward‑thinking SMEs
+		  Tu te concentrezi pe visul tău.
+		  </h1>
+		  <h1 className="text-5xl font-semibold tracking-tight text-blue-700">
+		  
           </h1>
+		  <h1 className="mt-4 text-4xl font-semibold tracking-tight text-blue-700">
+		  De restul ne ocupăm noi.
+		  </h1>
+
           <p className="mt-4 text-lg text-ink-600">
-            We streamline operations, cut manual work, and make your business measurably faster. Simple plans, fast delivery, clear ROI.
+            
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
-            <Link className="btn btn-primary" href="/contact">Book a free audit</Link>
-            <a className="btn btn-ghost" href="#process">See how we work</a>
+            <Link className="btn btn-primary" href="/contact">Programează un audit gratuit</Link>
+            <a className="btn btn-ghost" href="#process">Vezi cum lucrăm</a>
           </div>
         </div>
       </Section>
-
 {/* Services */}
+{/* Services */}
+  <Section id="services">
+        {/* Big centered heading */}
+        <h2 className="text-3xl font-semibold text-blue-900 text-center">
+          Marketing & Dezvoltarea Brandului
+        </h2>
+		<p className="mt-3 text-ink-600 text-center max-w-2xl mx-auto">
+    Construim sisteme de marketing care cresc odată cu tine. De la identitatea de brand la generarea de lead-uri, acoperim totul cu strategii clare și rezultate măsurabile.
+  </p>
 
+        {/* Two pillars under the big title */}
+        <div className="mt-6 grid gap-8 md:grid-cols-2 items-stretch">
+          <Pillar
+            title="Înainte de orice angajament"
+            titleClassName="text-saffron-500"
+            borderClassName="border-saffron-500/40"
+            layout="rowMobile"
+            items={[
+              {
+                title: 'Audit & strategie',
+                desc: 'Analiză de piață, potențial de creștere și un plan de acțiune inițial pe care îl păstrezi.'
+              },
+              {
+                title: 'Identitate de brand & ghiduri',
+                desc: 'Naming, ton, paletă și arhetip de brand, în baza viziunii tale și a analizei noastre.'
+              },
+              {
+                title: 'Website care convertește',
+                desc: 'Proiectăm, dezvoltăm și ne ocupăm de site-ul tău din prima zi.'
+              },
+            ]}
+          />
 
-<Section id="services">
-  <div className="grid gap-8 md:grid-cols-2 items-stretch">
-    <Pillar
-      title="Marketing & Brand Growth"
-      items={[
-        { title: 'Brand identity & guidelines', desc: 'Naming, tone, palette, visual guidelines.' },
-        { title: 'Website that converts', desc: 'Fast, clear site with booking/forms and analytics integration.' },
-        { title: 'Social media & content', desc: 'Strategy, calendar, content engine, reporting.' },
-        { title: 'Paid campaigns', desc: 'Google/Meta — from setup to objective-based optimization.' },
-        { title: 'Email & lead nurturing', desc: 'Simple automations to activate and retain leads.' },
-        { title: 'Measurement & optimization', desc: 'KPI dashboard and iterative testing for growth.' },
-      ]}
-    />
+          <Pillar
+            title="După ce începem"
+            layout="rowMobile"  // ← add this so these cards stack horizontally too
+            items={[
+              {
+                title: 'Campanii plătite',
+                desc: 'Campanii profesionale, gândite strategic, cu bugetele incluse în abonamentul de bază.'
+              },
+              {
+                title: 'Social media & conținut',
+                desc: 'Planificare, creare, postare și community management pe toate platformele relevante.'
+              },
+              {
+                title: 'Măsurare & optimizare',
+                desc: 'Raport și analiză periodică; actualizăm activ strategia de creștere pentru a obține cele mai bune rezultate cu investiția cea mai mică.'
+              },
+            ]}
+          />
+        </div>
 
-    <Pillar
-      title="Automation & Digitalization"
-      items={[
-        { title: 'Process automation', desc: 'Eliminate repetitive tasks with no/low-code or custom tools.' },
-        { title: 'Operations dashboards', desc: 'Sales/finance/projects live — decide in minutes.' },
-        { title: 'Data pipelines', desc: 'Clean, integrate and sync data across systems.' },
-        { title: 'SME systems audit', desc: 'Structured audit that finds the top 3 quick wins in 30 days.' },
-        { title: 'Training & SOPs', desc: 'Implementation, training, documentation so change sticks.' },
-        { title: 'Web integrations', desc: 'Payments, CRM, ERP, email — connected correctly.' },
-      ]}
-    />
+  {/* Automation & Digitalization as a regular grid */}
+
+  <div className="mt-16 md:mt-20">  {/* added space above */}
+  <h2 className="text-3xl font-semibold text-blue-900 text-center">
+    Automatizare & Digitalizare
+  </h2>
+  <p className="mt-3 text-ink-600 text-center max-w-2xl mx-auto">
+    Îți conectăm instrumentele, eliminăm pașii repetitivi și îți oferim vizibilitate clară asupra a tot ce se întâmplă — astfel încât munca să meargă de la sine, iar deciziile să dureze minute, nu săptămâni.
+  </p>
+
+  <div className="mt-8 grid gap-6 md:grid-cols-3">
+    {[
+		{
+		        title: 'Audit sisteme pentru IMM-uri',
+				desc:
+				  "Îți mapăm sistemele și îți oferim top 3 câștiguri rapide cu pași următori clari."
+			  },
+      {
+        title: 'Automatizarea proceselor',
+        desc:
+          "Scoatem munca repetitivă din afacerea ta astfel încât acestea să se întâmple automat."
+      },
+      {
+        title: 'Tablouri de bord operaționale',
+        desc:
+          "Vânzări/finanțe/proiecte live, personalizate, într-un singur loc. Vezi ce se întâmplă și acționează rapid, fără să mai alergi după foi de calcul."
+      },
+      {
+        title: 'Fluxuri de date',
+        desc:
+          "Curățăm, îmbinăm și sincronizăm datele între aplicații în mod fiabil — fără exporturi care se strică din două în două săptămâni."
+      },
+      {
+        title: 'Training & SOP-uri',
+        desc:
+          "SOP-uri simple și ghiduri video scurte, ca schimbarea să rămână după lansare — echipa ta crește cu tine."
+      },
+      {
+        title: 'Integrări web',
+        desc:
+          "Plăți, CRM, ERP, email — conectate corect, astfel încât datele să circule și nimic să nu se piardă pe parcurs."
+      },
+    ].map((s) => (
+      <div key={s.title} className="card card-hover p-6">
+        <div className="text-xl font-semibold">{s.title}</div>
+        <p className="mt-2 text-ink-600">{s.desc}</p>
+      </div>
+    ))}
   </div>
+</div>
 </Section>
 
       {/* Process */}
       <Section id="process" alt>
-        <h2 className="text-3xl font-semibold text-blue-900">Process</h2>
+        <h2 className="text-3xl font-semibold text-blue-900">Proces</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-5">
           {[
-            ['Audit', 'We map processes and bottlenecks.'],
-            ['Design', 'Blueprint with ROI, timeline, and stack.'],
-            ['Build', 'Automations, internal tools, and site.'],
-            ['Implement', 'Rollout, training, documentation.'],
-            ['Measure', 'Dashboards + 30/60/90‑day review.'],
+			['Întâlnire de cunoaștere', 'Te cunoaștem pe tine, viziunea și afacerea ta.'],
+            ['Audit', 'Realizăm o analiză a afacerii, a potențialului de creștere, a pieței și un plan de acțiune.'],
+            ['Construire', 'După ce ne dai ok-ul, începem implementarea.'],
+            ['Măsurare', 'Rapoarte la 30/60/90 de zile, în funcție de nevoile afacerii, în care măsurăm progresul.'],
+			['Îmbunătățire continuă', 'Actualizăm strategia pe baza rapoartelor periodice. Planul nostru crește odată cu tine.'],
           ].map(([t, d]) => (
             <div key={t} className="card p-5">
               <div className="font-semibold">{t}</div>
@@ -76,20 +157,20 @@ export default function HomePage() {
 
       {/* Results */}
       <Section id="results">
-        <h2 className="text-3xl font-semibold text-blue-900">Measurable results</h2>
+        <h2 className="text-3xl font-semibold text-blue-900">Rezultate măsurabile</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-3">
-          <Metric value="−30%" label="admin hours in 6 weeks" />
-          <Metric value="2×" label="faster invoice cycle" />
-          <Metric value="+18%" label="lead conversion after redesign" />
+          <Metric value="−30%" label="ore administrative în 6 săptămâni" />
+          <Metric value="2×" label="ciclu de facturare mai rapid" />
+          <Metric value="+18%" label="conversie lead-uri după redesign" />
         </div>
       </Section>
 
       {/* Testimonials */}
       <Section>
-        <h2 className="text-3xl font-semibold text-blue-900">What clients say</h2>
+        <h2 className="text-3xl font-semibold text-blue-900">Ce spun clienții</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-2">
-          <Testimonial quote="Synast turned our paperwork into a clean, automated flow. We got time back to run the business." author="Elena M., Construction Manager" />
-          <Testimonial quote="Our site finally brings leads. Clear plan, fast delivery, measurable results." author="Irina G., Independent Practitioner" />
+          <Testimonial quote="Colaborarea cu Ștefi pe partea de marketing pentru Foccaceria Zest a fost una dintre cele mai bune decizii pe care le-am luat pentru afacerea mea. Mi-a oferit sprijin pas cu pas, de la structurarea imaginii brandului și până la modul de prezentare online. Mi-a plăcut faptul că a înțeles rapid specificul localului și a venit cu idei creative, adaptate exact la ceea ce îmi doream să transmit clienților. Pe lângă partea de strategie, m-a ajutat și practic, explicându-mi clar ce trebuie făcut și de ce, ceea ce pentru mine a contat enorm. Este o persoană serioasă, implicată și foarte atentă la detalii. Comunicarea cu ea a fost ușoară și plăcută, iar rezultatele s-au văzut imediat în modul în care afacerea mea a început să prindă contur în mediul online. O recomand cu toată inima pentru că reușește să combine creativitatea cu profesionalismul și are talentul de a face lucrurile să pară simple, chiar și atunci când par complicate." author="Georgiana C., Focacceria Zest" />
+          <Testimonial quote="Site-ul nostru aduce, în sfârșit, lead-uri. Plan clar, livrare rapidă, rezultate măsurabile." author="Irina G., Practician independent" />
         </div>
       </Section>
 
@@ -97,15 +178,15 @@ export default function HomePage() {
       <Section id="about" alt>
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div>
-            <h2 className="text-3xl font-semibold text-blue-900">About Synast</h2>
+            <h2 className="text-3xl font-semibold text-blue-900">Despre Synast</h2>
             <p className="mt-4 text-ink-600">
-              I’m <strong>Stefi Tudor</strong>, founder of Synast Digital. With a business degree, software engineering background, and experience at Accenture, I build practical systems for SMEs in Romania—starting with quick wins, then compounding improvements.
+              Sunt <strong>Ștefania Tudor</strong>, fondatoarea Synast Digital. Cu o diplomă în business, background în inginerie software și experiență în companii multinaționale de consultanță, eu și echipa mea construim branduri de succes și sisteme accesibile pentru afacerile din România. Începem cu câștiguri rapide, ne adaptăm afacerii tale și aducem îmbunătățiri ce se cumulează.
             </p>
           </div>
           <div className="card p-6">
-            <div className="text-lg font-medium">Free 30‑minute audit</div>
-            <p className="mt-2 text-ink-600">We’ll identify 3 high‑ROI changes you can make this month.</p>
-            <Link href="/contact" className="mt-4 inline-block btn btn-primary">Book now</Link>
+            <div className="text-lg font-medium">Sesiune gratuită de 45 de minute de cunoaștere</div>
+            <p className="mt-2 text-ink-600">Identificăm 3 schimbări de impact pe care le poți face luna aceasta.</p>
+            <Link href="/contact" className="mt-4 inline-block btn btn-primary">Programează acum</Link>
           </div>
         </div>
       </Section>
@@ -113,9 +194,9 @@ export default function HomePage() {
       {/* CTA */}
       <Section className="py-24 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-900">
         <div className="mx-auto max-w-2xl text-center text-white">
-          <h2 className="text-4xl font-semibold">Ready to remove busywork and grow?</h2>
-          <p className="mt-3 opacity-90">Let’s build clean systems that scale with you.</p>
-          <Link href="/contact" className="mt-8 inline-flex items-center rounded-2xl bg-white/95 px-6 py-3 font-semibold text-blue-900 shadow-soft hover:shadow-lift">Book a free audit</Link>
+          <h2 className="text-4xl font-semibold">Ești gata să-ți urmezi visul?</h2>
+          <p className="mt-3 opacity-90">Hai să construim un brand care crește odată cu tine.</p>
+          <Link href="/contact" className="mt-8 inline-flex items-center rounded-2xl bg-white/95 px-6 py-3 font-semibold text-blue-900 shadow-soft hover:shadow-lift">Programează o sesiune gratuită de cunoaștere</Link>
         </div>
       </Section>
     </main>

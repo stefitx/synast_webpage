@@ -142,11 +142,11 @@ export default function HomePage() {
         <h2 className="text-3xl font-semibold text-blue-900">Process</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-5">
           {[
-            ['Audit', 'We map processes and bottlenecks.'],
-            ['Design', 'Blueprint with ROI, timeline, and stack.'],
-            ['Build', 'Automations, internal tools, and site.'],
-            ['Implement', 'Rollout, training, documentation.'],
-            ['Measure', 'Dashboards + 30/60/90‑day review.'],
+			['Discovery meeting', 'We get to know you, your vision and your business.'],
+            ['Audit', 'We make a comprehensive analysis of your business, its growth potential, competitor analysis and action plan.'],
+            ['Build', 'Once we agree on the plan, we start the implementation.'],
+            ['Measure', '30/60/90‑day reports, depending on your business needs, where we measure progress.'],
+			['Continous improvement', 'We update the strategy in base of the periodic reports. Our plan grows with you.'],
           ].map(([t, d]) => (
             <div key={t} className="card p-5">
               <div className="font-semibold">{t}</div>
@@ -170,7 +170,11 @@ export default function HomePage() {
       <Section>
         <h2 className="text-3xl font-semibold text-blue-900">What clients say</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-2">
-          <Testimonial quote="Synast turned our paperwork into a clean, automated flow. We got time back to run the business." author="Elena M., Construction Manager" />
+          <Testimonial quote="Working with Ștefi on the marketing for Foccaceria Zest was one of the best decisions I’ve made for my business. She offered step-by-step support, from shaping the brand image to how we present ourselves online. I loved how quickly she understood the specifics of the place and came with creative ideas tailored exactly to what I wanted to convey to customers.
+
+Beyond strategy, she helped hands-on too, clearly explaining what needed to be done and why—which mattered a lot to me. She’s reliable, dedicated, and very attentive to detail. Communication with her was easy and pleasant, and the results were immediately visible in how my business started taking shape online.
+
+I recommend her wholeheartedly because she manages to combine creativity with professionalism and has a talent for making things feel simple, even when they seem complicated." author="Georgiana C., Focacceria Zest" />
           <Testimonial quote="Our site finally brings leads. Clear plan, fast delivery, measurable results." author="Irina G., Independent Practitioner" />
         </div>
       </Section>
@@ -181,11 +185,11 @@ export default function HomePage() {
           <div>
             <h2 className="text-3xl font-semibold text-blue-900">About Synast</h2>
             <p className="mt-4 text-ink-600">
-              I’m <strong>Stefania Tudor</strong>, founder of Synast Digital. With a business degree, software engineering background, and experience at multinational consulting companies, I build successful brands and accessible systems for small and medium enterprises in Romania. We start with quick wins, tailor it to your business, then bring compounding improvements.
+              I’m <strong>Stefania Tudor</strong>, founder of Synast Digital. With a business degree, software engineering background, and experience at multinational consulting companies, me and my team build successful brands and accessible systems for enterprises in Romania. We start with quick wins, tailor it to your business, then bring compounding improvements.
             </p>
           </div>
           <div className="card p-6">
-            <div className="text-lg font-medium">Free 30‑minute audit</div>
+            <div className="text-lg font-medium">Free 45‑minute discovery call</div>
             <p className="mt-2 text-ink-600">We’ll identify 3 high‑ROI changes you can make this month.</p>
             <Link href="/contact" className="mt-4 inline-block btn btn-primary">Book now</Link>
           </div>
@@ -197,7 +201,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-2xl text-center text-white">
           <h2 className="text-4xl font-semibold">Ready to chase your dream?</h2>
           <p className="mt-3 opacity-90">Let’s build a brand that grows with you.</p>
-          <Link href="/contact" className="mt-8 inline-flex items-center rounded-2xl bg-white/95 px-6 py-3 font-semibold text-blue-900 shadow-soft hover:shadow-lift">Book a free audit</Link>
+          <Link href="/contact" className="mt-8 inline-flex items-center rounded-2xl bg-white/95 px-6 py-3 font-semibold text-blue-900 shadow-soft hover:shadow-lift">Book a free discovery call</Link>
         </div>
       </Section>
     </main>
