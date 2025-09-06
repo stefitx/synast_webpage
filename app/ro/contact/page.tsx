@@ -13,7 +13,7 @@ export default function ContactRO() {
           </p>
 
           <form
-            action="https://formspree.io/f/https://formspree.io/f/mrbaogln"
+            action="https://formspree.io/f/mrbaogln"
             method="POST"
             acceptCharset="UTF-8"
             className="mt-8 space-y-4"
