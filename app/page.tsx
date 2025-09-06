@@ -6,7 +6,7 @@ import Pillar from '@/components/Pillar'
 
 // app/page.tsx  (EN)
 export const metadata = {
-	title: 'Marketing, Branding & Digitalization', // becomes “Automation… — Synast Digital” via template
+	title: { absolute: 'Synast Digital — Marketing, Branding & Digitalization', template: '%s — Synast Digital' },
 	description:
 	  'You focus on your dream. We handle the rest. Branding, strategy, and business process automation.',
   }

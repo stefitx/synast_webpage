@@ -6,7 +6,7 @@ import Pillar from '@/components/Pillar'
 
 // app/ro/page.tsx  (RO)
 export const metadata = {
-	title: 'Synast Digital - Marketing, Branding, Strategie & Digitalizare',
+	title: { absolute: 'SSynast Digital - Marketing, Branding, Strategie & Digitalizare' }, 
 	description:
 	  'Tu te concentrezi pe visul tău. Noi îți maximizăm veniturile. Branding, strategie și automatizarea proceselor de business.',
   }
