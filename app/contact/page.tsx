@@ -12,7 +12,7 @@ export default function ContactPage() {
 
           {/* Static form for GitHub Pages — use Formspree/Getform if you want submissions. */}
 		  <form
-  action="https://formspree.io/f/https://formspree.io/f/mrbaogln"  // 👈 paste your real ID
+  action="https://formspree.io/f/mrbaogln"  // 👈 paste your real ID
   method="POST"
   acceptCharset="UTF-8"
   className="mt-8 space-y-4"
