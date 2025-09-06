@@ -9,8 +9,8 @@ export default function Navbar() {
   const base = isRO ? '/ro' : ''
 
   const labels = isRO
-    ? { services: 'Servicii', process: 'Proces', results: 'Rezultate', about: 'Despre', ctaShort: 'Audit gratuit', ctaLong: 'Programează un meeting gratuit' }
-    : { services: 'Services', process: 'Process', results: 'Results', about: 'About', ctaShort: 'Free audit', ctaLong: 'Book a free discovey call' }
+    ? { services: 'Servicii', process: 'Proces', results: 'Rezultate', about: 'Despre', ctaShort: 'Meeting gratuit', ctaLong: 'Programează un meeting gratuit' }
+    : { services: 'Services', process: 'Process', results: 'Results', about: 'About', ctaShort: 'Discovery call', ctaLong: 'Book a free discovery call' }
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/5">
