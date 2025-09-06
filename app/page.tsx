@@ -4,6 +4,14 @@ import { Metric } from '@/components/Metrics'
 import Link from 'next/link'
 import Pillar from '@/components/Pillar'
 
+// app/page.tsx  (EN)
+export const metadata = {
+	title: 'Marketing, Branding & Digitalization', // becomes “Automation… — Synast Digital” via template
+	description:
+	  'You focus on your dream. We handle the rest. Branding, strategy, and business process automation.',
+  }
+  
+
 export default function HomePage() {
   return (
     <main>

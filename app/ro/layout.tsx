@@ -1,22 +1,23 @@
+// app/ro/layout.tsx
 import '../globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Synast Digital — Automatizări & Digitalizare pentru IMM-uri',
-  description: 'Sisteme simple, rapide, cu ROI clar.',
-}
-
-const roLabels = {
-  services: 'Servicii',
-  process: 'Proces',
-  results: 'Rezultate',
-  about: 'Despre',
-  cta: 'Programează un audit gratuit',
+export const metadata: Metadata = {
+  title: {
+    default: 'Synast Digital — Marketing, Branding, Strategie & Digitalizare',
+    template: '%s — Synast Digital',
+  },
+  description: 'Tu te concentrezi pe visul tău. Noi îți maximizăm veniturile. Branding, strategie și automatizarea proceselor de business.',
+  alternates: {
+    canonical: '/ro',
+    languages: {
+      'en': '/',       // English version
+      'ro-RO': '/ro',  // Romanian version
+    },
+  },
 }
 
 export default function RoLayout({ children }: { children: React.ReactNode }) {
-	// No <html> or <body> here; the root layout already provides them.
-	// We also don't render Navbar/Footer here—root layout will do that for both locales.
-	return <main lang="ro">{children}</main>;
-  }
+  // Root <html> stays "en" in the global layout; we scope Romanian here.
+  return <main lang="ro">{children}</main>
+}

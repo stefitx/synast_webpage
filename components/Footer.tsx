@@ -18,7 +18,7 @@ export default function Footer() {
     <footer className="section-alt">
       <div className="container grid gap-8 md:grid-cols-3">
         <div>
-          <div className="font-semibold">Synast Digital SRL</div>
+          <div className="font-semibold">Synast Digital</div>
           <p className="mt-2 text-ink-600">Branding, marketing, automation & digitalization.</p>
         </div>
         <div className="space-y-2">
