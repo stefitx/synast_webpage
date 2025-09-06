@@ -2,6 +2,7 @@ import Section from '@/components/Section'
 import Testimonial from '@/components/Testimonial'
 import { Metric } from '@/components/Metrics'
 import Link from 'next/link'
+import Pillar from '@/components/Pillar'
 
 export default function HomePage() {
   return (
@@ -9,12 +10,19 @@ export default function HomePage() {
       {/* Hero */}
       <Section className="pt-24">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="badge">Built in Romania · Premium, minimal</span>
+          <span className="badge">Low upfront investment. We get paid when you're happy.</span>
           <h1 className="mt-4 text-5xl font-semibold tracking-tight text-blue-900">
-            Automation & digitalization for forward‑thinking SMEs
+		  You focus on your dream.
+		  </h1>
+		  <h1 className="text-5xl font-semibold tracking-tight text-blue-700">
+		  
           </h1>
+		  <h1 className="mt-4 text-4xl font-semibold tracking-tight text-blue-700">
+		  We handle the rest.
+		  </h1>
+
           <p className="mt-4 text-lg text-ink-600">
-            We streamline operations, cut manual work, and make your business measurably faster. Simple plans, fast delivery, clear ROI.
+            
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
             <Link className="btn btn-primary" href="/contact">Book a free audit</Link>
@@ -23,40 +31,110 @@ export default function HomePage() {
         </div>
       </Section>
 {/* Services */}
-<Section id="services">
-  <h2 className="text-3xl font-semibold text-blue-900">Marketing & Brand Growth</h2>
-  <div className="mt-6 grid gap-6 md:grid-cols-3">
-    {[
-      { title: 'Brand identity & guidelines', desc: 'Naming, ton, paletă, guideline vizual.' },
-      { title: 'Website care convertește', desc: 'Site rapid, clar, cu formulare/booking și integrare analytics.' },
-      { title: 'Social media & conținut', desc: 'Strategie, calendare, content engine, raportare.' },
-      { title: 'Campanii plătite', desc: 'Google/Meta — de la setup la optimizare pe obiective.' },
-      { title: 'Email & lead nurturing', desc: 'Automatizări simple pentru activarea și retenția leadurilor.' },
-      { title: 'Măsurare & optimizare', desc: 'KPI dashboard și teste iterative pentru creștere.' },
-    ].map(s => (
-      <div key={s.title} className="card card-hover p-6">
-        <div className="text-xl font-semibold">{s.title}</div>
-        <p className="mt-2 text-ink-600">{s.desc}</p>
-      </div>
-    ))}
-  </div>
+{/* Services */}
+  <Section id="services">
+        {/* Big centered heading */}
+        <h2 className="text-3xl font-semibold text-blue-900 text-center">
+          Marketing & Brand Growth
+        </h2>
+		<p className="mt-3 text-ink-600 text-center max-w-2xl mx-auto">
+    We design marketing systems that grow with you. From brand identity to lead generation, we cover it all with clear strategies and measurable results.
+  </p>
 
-  <h3 className="mt-12 text-2xl font-semibold text-blue-900">Automation & Digitalization</h3>
-  <div className="mt-6 grid gap-6 md:grid-cols-3">
+        {/* Two pillars under the big title */}
+        <div className="mt-6 grid gap-8 md:grid-cols-2 items-stretch">
+          <Pillar
+            title="Before any commitment"
+            titleClassName="text-saffron-500"
+            borderClassName="border-saffron-500/40"
+            layout="rowMobile"
+            items={[
+              {
+                title: 'Audit & strategy',
+                desc: 'Market analysis, growth potential and an initial action plan you can keep.'
+              },
+              {
+                title: 'Brand identity & guidelines',
+                desc: 'Naming, tone, palette and persona in base of your vision and our expert analysis.'
+              },
+              {
+                title: 'Website that converts',
+                desc: 'We design, develop and maintain your website from day 1.'
+              },
+            ]}
+          />
+
+          <Pillar
+            title="Once we start"
+            layout="rowMobile"  // ← add this so these cards stack horizontally too
+            items={[
+              {
+                title: 'Paid campaigns',
+                desc: 'Professional campaigns, expertly strategized, with budgets included in the base fee.'
+              },
+              {
+                title: 'Social media & content',
+                desc: 'Planning, creation, posting, and community management on all relevant platforms.'
+              },
+              {
+                title: 'Measurement & optimization',
+                desc: 'Periodic report and analysis, actively updating the growth strategy to reach the best results with the smallest investment.'
+              },
+            ]}
+          />
+        </div>
+
+  {/* Automation & Digitalization as a regular grid */}
+
+  <div className="mt-16 md:mt-20">  {/* added space above */}
+  <h2 className="text-3xl font-semibold text-blue-900 text-center">
+    Automation & Digitalization
+  </h2>
+  <p className="mt-3 text-ink-600 text-center max-w-2xl mx-auto">
+    We connect your tools, remove repetitive steps, and give you a clear view of what’s
+    happening-so work moves on its own and decisions take minutes, not weeks.
+  </p>
+
+  <div className="mt-8 grid gap-6 md:grid-cols-3">
     {[
-      { title: 'Process automation', desc: 'Eliminăm taskurile repetitive cu no/low-code sau tooluri custom.' },
-      { title: 'Operations dashboards', desc: 'Vânzări/finanțe/proiecte în timp real, decizii în minute.' },
-      { title: 'Data pipelines', desc: 'Curățare, integrare și sincronizare date între sisteme.' },
-      { title: 'SME systems audit', desc: 'Audit structurat care găsește top 3 quick wins în 30 de zile.' },
-      { title: 'Training & SOPs', desc: 'Implementare, training, documentație ca schimbarea să rămână.' },
-      { title: 'Web integrations', desc: 'Plăți, CRM, ERP, e-mail — conectate corect.' },
-    ].map(s => (
+		{
+		        title: 'SME systems audit',
+				desc:
+				  "We map your systems and hand you the top 3 quick wins with clear next steps."
+			  },
+      {
+        title: 'Process automation',
+        desc:
+          "We take the busywork out of your tools together so the right things happen automatically."
+      },
+      {
+        title: 'Operations dashboards',
+        desc:
+          "Personalized live sales/finance/projects in one place. See what’s happening and act fast, without chasing spreadsheets."
+      },
+      {
+        title: 'Data pipelines',
+        desc:
+          "Clean, join, and sync data between apps reliably—no more exports that break every other week."
+      },
+      {
+        title: 'Training & SOPs',
+        desc:
+          "Simple SOPs and short video guides so the change sticks after launch—your team stays confident."
+      },
+      {
+        title: 'Web integrations',
+        desc:
+          "Payments, CRM, ERP, email—connected the right way so data flows and nothing falls through the cracks."
+      },
+    ].map((s) => (
       <div key={s.title} className="card card-hover p-6">
         <div className="text-xl font-semibold">{s.title}</div>
         <p className="mt-2 text-ink-600">{s.desc}</p>
       </div>
     ))}
   </div>
+</div>
 </Section>
 
       {/* Process */}
@@ -103,7 +181,7 @@ export default function HomePage() {
           <div>
             <h2 className="text-3xl font-semibold text-blue-900">About Synast</h2>
             <p className="mt-4 text-ink-600">
-              I’m <strong>Stefi Tudor</strong>, founder of Synast Digital. With a business degree, software engineering background, and experience at Accenture, I build practical systems for SMEs in Romania—starting with quick wins, then compounding improvements.
+              I’m <strong>Stefania Tudor</strong>, founder of Synast Digital. With a business degree, software engineering background, and experience at multinational consulting companies, I build successful brands and accessible systems for small and medium enterprises in Romania. We start with quick wins, tailor it to your business, then bring compounding improvements.
             </p>
           </div>
           <div className="card p-6">
@@ -117,8 +195,8 @@ export default function HomePage() {
       {/* CTA */}
       <Section className="py-24 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-900">
         <div className="mx-auto max-w-2xl text-center text-white">
-          <h2 className="text-4xl font-semibold">Ready to remove busywork and grow?</h2>
-          <p className="mt-3 opacity-90">Let’s build clean systems that scale with you.</p>
+          <h2 className="text-4xl font-semibold">Ready to chase your dream?</h2>
+          <p className="mt-3 opacity-90">Let’s build a brand that grows with you.</p>
           <Link href="/contact" className="mt-8 inline-flex items-center rounded-2xl bg-white/95 px-6 py-3 font-semibold text-blue-900 shadow-soft hover:shadow-lift">Book a free audit</Link>
         </div>
       </Section>
