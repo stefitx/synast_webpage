@@ -193,7 +193,7 @@ I recommend her wholeheartedly because she manages to combine creativity with pr
           <div>
             <h2 className="text-3xl font-semibold text-blue-900">About Synast</h2>
             <p className="mt-4 text-ink-600">
-              I’m <strong>Stefania Tudor</strong>, founder of Synast Digital. With a business degree, software engineering background, and experience at multinational consulting companies, me and my team build successful brands and accessible systems for enterprises in Romania. We start with quick wins, tailor it to your business, then bring compounding improvements.
+              I’m <strong>Stefania Tudor</strong>, founder of Synast Digital. With a business degree, software engineering background, and experience at multinational consulting companies, my team and I build successful brands and accessible systems for enterprises in Romania. We start with quick wins, tailor it to your business, then bring compounding improvements.
             </p>
           </div>
           <div className="card p-6">
