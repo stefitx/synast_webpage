@@ -57,7 +57,7 @@ export default function ContactForm({
       <label className="flex items-start gap-2 text-sm text-ink-600">
         <input required type="checkbox" name="consent" className="mt-1" />
         {locale === 'ro'
-          ? <>Sunt de acord cu <a className="underline" href="/ro/privacy/">Politica de confidențialitate</a>.</>
+          ? <>Sunt de acord cu <a className="underline" href="/ro/privacy">Politica de confidențialitate</a>.</>
           : <>I agree to the <a className="underline" href="/privacy">Privacy Policy</a>.</>}
       </label>
 
