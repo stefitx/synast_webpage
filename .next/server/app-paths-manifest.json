@@ -1,3 +1,12 @@
 {
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/icon.png/route": "app/icon.png/route.js",
+  "/contact/sent/page": "app/contact/sent/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/page": "app/page.js",
+  "/ro/contact/sent/page": "app/ro/contact/sent/page.js",
+  "/ro/contact/page": "app/ro/contact/page.js",
+  "/ro/privacy/page": "app/ro/privacy/page.js",
+  "/ro/page": "app/ro/page.js"
 }
