@@ -9,8 +9,8 @@ export default function Navbar() {
   const base = isRO ? '/ro' : ''
 
   const labels = isRO
-    ? { services: 'Servicii', process: 'Proces', results: 'Rezultate', about: 'Despre', ctaShort: 'Meeting gratuit', ctaLong: 'Programează un meeting gratuit' }
-    : { services: 'Services', process: 'Process', results: 'Results', about: 'About', ctaShort: 'Discovery call', ctaLong: 'Book a free discovery call' }
+    ? { services: 'Servicii', process: 'Proces', results: 'Rezultate', about: 'Despre', ctaShort: 'Meeting', ctaLong: 'Programează un meeting' }
+    : { services: 'Services', process: 'Process', results: 'Results', about: 'About', ctaShort: 'Discovery call', ctaLong: 'Book a discovery call' }
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/5">
@@ -35,10 +35,18 @@ export default function Navbar() {
           <Link href={isRO ? '/' : '/ro/'} className="footer-link text-sm md:text-base">
             {isRO ? 'EN' : 'RO'}
           </Link>
-		  <Link href={`${base}/contact/`} className="btn-cta md:text-base text-sm">
+		  <Link
+  href={`${base}/contact/`}
+  className="btn inline-flex rounded-xl px-3 py-2 text-sm whitespace-nowrap shadow-soft
+             md:rounded-2xl md:px-5 md:py-3 md:text-base
+             !bg-[#F6C000] hover:!bg-[#E0AE00]
+             !text-white hover:!text-white
+             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#E0AE00]"
+>
   <span className="md:hidden">{labels.ctaShort}</span>
   <span className="hidden md:inline">{labels.ctaLong}</span>
 </Link>
+
         </div>
       </div>
     </header>
