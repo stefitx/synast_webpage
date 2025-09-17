@@ -35,13 +35,10 @@ export default function Navbar() {
           <Link href={isRO ? '/' : '/ro/'} className="footer-link text-sm md:text-base">
             {isRO ? 'EN' : 'RO'}
           </Link>
-          <Link
-            href={`${base}/contact/`}
-            className="btn btn-primary inline-flex rounded-xl px-3 py-2 text-sm whitespace-nowrap shadow-soft md:rounded-2xl md:px-5 md:py-3 md:text-base"
-          >
-            <span className="md:hidden">{labels.ctaShort}</span>
-            <span className="hidden md:inline">{labels.ctaLong}</span>
-          </Link>
+		  <Link href={`${base}/contact/`} className="btn-cta md:text-base text-sm">
+  <span className="md:hidden">{labels.ctaShort}</span>
+  <span className="hidden md:inline">{labels.ctaLong}</span>
+</Link>
         </div>
       </div>
     </header>
