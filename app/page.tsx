@@ -2,15 +2,13 @@ import Section from '@/components/Section'
 import Testimonial from '@/components/Testimonial'
 import { Metric } from '@/components/Metrics'
 import Link from 'next/link'
-import Pillar from '@/components/Pillar'
 
 // app/page.tsx  (EN)
 export const metadata = {
-	title: { absolute: 'Synast Digital — Marketing, Branding & Digitalization', template: '%s — Synast Digital' },
-	description:
-	  'You focus on your dream. We handle the rest. Branding, strategy, and business process automation.',
-  }
-  
+  title: { absolute: 'Synast Digital — Marketing, Branding & Digitalization', template: '%s — Synast Digital' },
+  description:
+    'You focus on your dream. We handle the rest. Branding, strategy, and business process automation.',
+}
 
 export default function HomePage() {
   return (
@@ -18,143 +16,134 @@ export default function HomePage() {
       {/* Hero */}
       <Section className="pt-24">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="badge">Low upfront investment. We get paid when you're happy.</span>
           <h1 className="mt-4 text-5xl font-semibold tracking-tight text-blue-900">
-		  You focus on your dream.
-		  </h1>
-		  <h1 className="text-5xl font-semibold tracking-tight text-blue-700">
-		  
+            You focus on your dream.
           </h1>
-		  <h1 className="mt-4 text-4xl font-semibold tracking-tight text-blue-700">
-		  We handle the rest.
-		  </h1>
+          <h1 className="text-5xl font-semibold tracking-tight text-blue-700"></h1>
+          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-blue-700">
+            We handle the rest.
+          </h1>
 
-          <p className="mt-4 text-lg text-ink-600">
-            
-          </p>
+          <p className="mt-4 text-lg text-ink-600"></p>
           <div className="mt-8 flex items-center justify-center gap-4">
             <Link className="btn btn-primary" href="/contact">Book a free audit</Link>
             <a className="btn btn-ghost" href="#process">See how we work</a>
           </div>
         </div>
       </Section>
-{/* Services */}
-{/* Services */}
-  <Section id="services">
-        {/* Big centered heading */}
+
+      {/* Services */}
+      <Section id="services">
+        {/* Marketing & Brand Growth — grid like Automation */}
         <h2 className="text-3xl font-semibold text-blue-900 text-center">
           Marketing & Brand Growth
         </h2>
-		<p className="mt-3 text-ink-600 text-center max-w-2xl mx-auto">
-    We design marketing systems that grow with you. From brand identity to lead generation, we cover it all with clear strategies and measurable results.
-  </p>
+        <p className="mt-3 text-ink-600 text-center max-w-2xl mx-auto">
+          We design marketing systems that grow with you. From brand identity to lead generation, we cover it all with clear strategies and measurable results.
+        </p>
 
-        {/* Two pillars under the big title */}
-        <div className="mt-6 grid gap-8 md:grid-cols-2 items-stretch">
-          <Pillar
-            title="Before any commitment"
-            titleClassName="text-saffron-500"
-            borderClassName="border-saffron-500/40"
-            layout="rowMobile"
-            items={[
-              {
-                title: 'Audit & strategy',
-                desc: 'Market analysis, growth potential and an initial action plan you can keep.'
-              },
-              {
-                title: 'Brand identity & guidelines',
-                desc: 'Naming, tone, palette and persona in base of your vision and our expert analysis.'
-              },
-              {
-                title: 'Website that converts',
-                desc: 'We design, develop and maintain your website from day 1.'
-              },
-            ]}
-          />
-
-          <Pillar
-            title="Once we start"
-            layout="rowMobile"  // ← add this so these cards stack horizontally too
-            items={[
-              {
-                title: 'Paid campaigns',
-                desc: 'Professional campaigns, expertly strategized, with budgets included in the base fee.'
-              },
-              {
-                title: 'Social media & content',
-                desc: 'Planning, creation, posting, and community management on all relevant platforms.'
-              },
-              {
-                title: 'Measurement & optimization',
-                desc: 'Periodic report and analysis, actively updating the growth strategy to reach the best results with the smallest investment.'
-              },
-            ]}
-          />
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              title: 'Audit & strategy',
+              desc:
+                'Market analysis, growth potential, and a practical action plan you can keep.',
+            },
+            {
+              title: 'Brand identity & guidelines',
+              desc:
+                'Naming, tone, palette, and persona aligned to your vision and the market.',
+            },
+            {
+              title: 'Website that converts',
+              desc:
+                'Design, development, and ongoing maintenance focused on conversion.',
+            },
+            {
+              title: 'Paid campaigns',
+              desc:
+                'End-to-end campaign strategy and management; budgets planned for ROI.',
+            },
+            {
+              title: 'Social media & content',
+              desc:
+                'Planning, creation, posting, and community management across platforms.',
+            },
+            {
+              title: 'Measurement & optimization',
+              desc:
+                'Regular reporting and iterative improvements to maximize results per €.',
+            },
+          ].map((s) => (
+            <div key={s.title} className="card card-hover p-6">
+              <div className="text-xl font-semibold">{s.title}</div>
+              <p className="mt-2 text-ink-600">{s.desc}</p>
+            </div>
+          ))}
         </div>
 
-  {/* Automation & Digitalization as a regular grid */}
+        {/* Automation & Digitalization — unchanged grid */}
+        <div className="mt-16 md:mt-20">
+          <h2 className="text-3xl font-semibold text-blue-900 text-center">
+            Automation & Digitalization
+          </h2>
+          <p className="mt-3 text-ink-600 text-center max-w-2xl mx-auto">
+            We connect your tools, remove repetitive steps, and give you a clear view of what’s
+            happening—so work moves on its own and decisions take minutes, not weeks.
+          </p>
 
-  <div className="mt-16 md:mt-20">  {/* added space above */}
-  <h2 className="text-3xl font-semibold text-blue-900 text-center">
-    Automation & Digitalization
-  </h2>
-  <p className="mt-3 text-ink-600 text-center max-w-2xl mx-auto">
-    We connect your tools, remove repetitive steps, and give you a clear view of what’s
-    happening-so work moves on its own and decisions take minutes, not weeks.
-  </p>
-
-  <div className="mt-8 grid gap-6 md:grid-cols-3">
-    {[
-		{
-		        title: 'SME systems audit',
-				desc:
-				  "We map your systems and hand you the top 3 quick wins with clear next steps."
-			  },
-      {
-        title: 'Process automation',
-        desc:
-          "We take the busywork out of your tools together so the right things happen automatically."
-      },
-      {
-        title: 'Operations dashboards',
-        desc:
-          "Personalized live sales/finance/projects in one place. See what’s happening and act fast, without chasing spreadsheets."
-      },
-      {
-        title: 'Data pipelines',
-        desc:
-          "Clean, join, and sync data between apps reliably—no more exports that break every other week."
-      },
-      {
-        title: 'Training & SOPs',
-        desc:
-          "Simple SOPs and short video guides so the change sticks after launch—your team stays confident."
-      },
-      {
-        title: 'Web integrations',
-        desc:
-          "Payments, CRM, ERP, email—connected the right way so data flows and nothing falls through the cracks."
-      },
-    ].map((s) => (
-      <div key={s.title} className="card card-hover p-6">
-        <div className="text-xl font-semibold">{s.title}</div>
-        <p className="mt-2 text-ink-600">{s.desc}</p>
-      </div>
-    ))}
-  </div>
-</div>
-</Section>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: 'SME systems audit',
+                desc:
+                  'We map your systems and hand you the top 3 quick wins with clear next steps.',
+              },
+              {
+                title: 'Process automation',
+                desc:
+                  'We take the busywork out of your tools so the right things happen automatically.',
+              },
+              {
+                title: 'Operations dashboards',
+                desc:
+                  'Personalized live sales/finance/projects in one place—act fast without chasing sheets.',
+              },
+              {
+                title: 'Data pipelines',
+                desc:
+                  'Clean, join, and sync data between apps reliably—no more brittle exports.',
+              },
+              {
+                title: 'Training & SOPs',
+                desc:
+                  'Simple SOPs and short videos so the change sticks—your team stays confident.',
+              },
+              {
+                title: 'Web integrations',
+                desc:
+                  'Payments, CRM, ERP, email—connected so data flows and nothing falls through the cracks.',
+              },
+            ].map((s) => (
+              <div key={s.title} className="card card-hover p-6">
+                <div className="text-xl font-semibold">{s.title}</div>
+                <p className="mt-2 text-ink-600">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
 
       {/* Process */}
       <Section id="process" alt>
         <h2 className="text-3xl font-semibold text-blue-900">Process</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-5">
           {[
-			['Discovery meeting', 'We get to know you, your vision and your business.'],
+            ['Discovery meeting', 'We get to know you, your vision and your business.'],
             ['Audit', 'We make a comprehensive analysis of your business, its growth potential, competitor analysis and action plan.'],
             ['Build', 'Once we agree on the plan, we start the implementation.'],
-            ['Measure', '30/60/90‑day reports, depending on your business needs, where we measure progress.'],
-			['Continous improvement', 'We update the strategy in base of the periodic reports. Our plan grows with you.'],
+            ['Measure', '30/60/90-day reports, depending on your business needs, where we measure progress.'],
+            ['Continous improvement', 'We update the strategy based on periodic reports. Our plan grows with you.'],
           ].map(([t, d]) => (
             <div key={t} className="card p-5">
               <div className="font-semibold">{t}</div>
@@ -197,8 +186,8 @@ I recommend her wholeheartedly because she manages to combine creativity with pr
             </p>
           </div>
           <div className="card p-6">
-            <div className="text-lg font-medium">Free 45‑minute discovery call</div>
-            <p className="mt-2 text-ink-600">We’ll identify 3 high‑ROI changes you can make this month.</p>
+            <div className="text-lg font-medium">Free 45-minute discovery call</div>
+            <p className="mt-2 text-ink-600">We’ll identify 3 high-ROI changes you can make this month.</p>
             <Link href="/contact" className="mt-4 inline-block btn btn-primary">Book now</Link>
           </div>
         </div>
