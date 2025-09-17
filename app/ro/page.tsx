@@ -26,7 +26,7 @@ export default function HomePage() {
 
           <p className="mt-4 text-lg text-ink-600"></p>
           <div className="mt-8 flex items-center justify-center gap-4">
-            <Link className="btn btn-primary" href="/contact">Programează un audit gratuit</Link>
+            <Link className="btn btn-primary" href="/contact">Programează un meeting</Link>
             <a className="btn btn-ghost" href="#process">Vezi cum lucrăm</a>
           </div>
         </div>
@@ -181,7 +181,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="card p-6">
-            <div className="text-lg font-medium">Sesiune gratuită de 45 de minute de cunoaștere</div>
+            <div className="text-lg font-medium">Sesiune de 45 de minute de cunoaștere</div>
             <p className="mt-2 text-ink-600">Identificăm 3 schimbări de impact pe care le poți face luna aceasta.</p>
             <Link href="/contact" className="mt-4 inline-block btn btn-primary">Programează acum</Link>
           </div>
@@ -194,7 +194,7 @@ export default function HomePage() {
           <h2 className="text-4xl font-semibold">Ești gata să-ți urmezi visul?</h2>
           <p className="mt-3 opacity-90">Hai să construim un brand care crește odată cu tine.</p>
           <Link href="/contact" className="mt-8 inline-flex items-center rounded-2xl bg-white/95 px-6 py-3 font-semibold text-blue-900 shadow-soft hover:shadow-lift">
-            Programează o sesiune gratuită de cunoaștere
+            Programează o sesiune de cunoaștere
           </Link>
         </div>
       </Section>

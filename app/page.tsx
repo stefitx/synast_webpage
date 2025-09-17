@@ -26,7 +26,7 @@ export default function HomePage() {
 
           <p className="mt-4 text-lg text-ink-600"></p>
           <div className="mt-8 flex items-center justify-center gap-4">
-            <Link className="btn btn-primary" href="/contact">Book a free audit</Link>
+            <Link className="btn btn-primary" href="/contact">Book a discovery call</Link>
             <a className="btn btn-ghost" href="#process">See how we work</a>
           </div>
         </div>

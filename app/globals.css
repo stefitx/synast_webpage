@@ -20,13 +20,7 @@ body { @apply text-ink-900 bg-white antialiased; }
 .container { @apply max-w-container mx-auto px-4 md:px-6; }
 
 .btn { @apply inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold shadow-soft transition; }
-/* globals.css */
-.btn-cta {
-	@apply inline-flex rounded-2xl px-5 py-3 font-semibold shadow-soft
-		   bg-saffron-500 hover:bg-saffron-600 text-blue-900
-		   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-saffron-600;
-  }
-  
+.btn-primary { @apply bg-blue-700 text-white hover:shadow-lift; }
 .btn-ghost { @apply border border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white; }
 
 .badge { @apply inline-flex items-center rounded-full bg-saffron-500/20 text-blue-900 px-3 py-1 text-sm font-medium; }
