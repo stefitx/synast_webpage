@@ -9,8 +9,25 @@ export default function Navbar() {
   const base = isRO ? '/ro' : ''
 
   const labels = isRO
-    ? { services: 'Servicii', process: 'Proces', results: 'Rezultate', about: 'Despre', ctaShort: 'Meeting', ctaLong: 'Programează un meeting' }
-    : { services: 'Services', process: 'Process', results: 'Results', about: 'About', ctaShort: 'Discovery call', ctaLong: 'Book a discovery call' }
+    ? {
+        services: 'Servicii',
+        process: 'Proces',
+        results: 'Rezultate',
+        about: 'Despre',
+        knowUs: 'Cunoaște-ne',
+        ctaShort: 'Meeting',
+        ctaLong: 'Programează un meeting',
+      }
+    : {
+        services: 'Services',
+        process: 'Process',
+        results: 'Results',
+        about: 'About',
+        knowUs: 'Get to know us',
+        ctaShort: 'Discovery call',
+        ctaLong: 'Book a discovery call',
+      }
+  const knowUsHref = isRO ? '/ro/cunoaste-ne/' : '/get-to-know-us/'
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/5">
@@ -28,6 +45,9 @@ export default function Navbar() {
           <Link href={`${base}/#process`} className="footer-link">{labels.process}</Link>
           <Link href={`${base}/#results`} className="footer-link">{labels.results}</Link>
           <Link href={`${base}/#about`} className="footer-link">{labels.about}</Link>
+          <Link href={knowUsHref} className="footer-link">
+            {labels.knowUs}
+          </Link>
         </nav>
 
         {/* Right: language + CTA (CTA always visible, smaller on phones) */}

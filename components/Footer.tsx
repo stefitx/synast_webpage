@@ -11,8 +11,10 @@ export default function Footer() {
     company: isRO ? 'Companie' : 'Company',
     contact: 'Contact',
     privacy: isRO ? 'Confidențialitate' : 'Privacy',
+    knowUs: isRO ? 'Cunoaște-ne' : 'Get to know us',
     getInTouch: isRO ? 'Contact' : 'Get in touch',
   }
+  const knowUsHref = isRO ? '/ro/cunoaste-ne/' : '/get-to-know-us/'
 
   return (
     <footer className="section-alt">
@@ -25,6 +27,7 @@ export default function Footer() {
           <div className="font-semibold">{labels.company}</div>
           <Link href={`${base}/contact/`} className="footer-link block">{labels.contact}</Link>
           <Link href={`${base}/privacy/`} className="footer-link block">{labels.privacy}</Link>
+          <Link href={knowUsHref} className="footer-link block">{labels.knowUs}</Link>
         </div>
         <div className="space-y-2">
           <div className="font-semibold">{labels.getInTouch}</div>
