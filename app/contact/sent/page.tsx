@@ -1,7 +1,34 @@
 import Section from '@/components/Section'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 
-export const metadata = { title: 'Message sent — Synast Digital' }
+export const metadata: Metadata = {
+  title: 'Message sent — Synast Digital',
+  description: 'Thanks for reaching out to Synast Digital. We will reply within two business days.',
+  alternates: { canonical: '/contact/sent', languages: { 'en-US': '/contact/sent', 'ro-RO': '/ro/contact/sent' } },
+  openGraph: {
+    title: 'Message received — Synast Digital',
+    description: 'We received your message and will reply shortly.',
+    url: 'https://www.synastdigital.com/contact/sent',
+    locale: 'en_US',
+    siteName: 'Synast Digital',
+    images: [
+      {
+        url: 'https://www.synastdigital.com/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Synast Digital logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Message received — Synast Digital',
+    description: 'We will reply within two business days.',
+    images: ['https://www.synastdigital.com/logo.png'],
+  },
+  robots: { index: false, follow: false },
+}
 
 export default function Sent() {
   return (

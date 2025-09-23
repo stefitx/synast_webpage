@@ -11,6 +11,28 @@ export const metadata: Metadata = {
     languages: { 'en-US': '/exclusive-invite', 'ro-RO': '/ro/invitatie-exclusiva' },
   },
   robots: { index: false, follow: true },
+  openGraph: {
+    title: 'Invitație exclusivă Synast Digital',
+    description:
+      'Descoperă oportunitățile de creștere pe care le-am identificat special pentru afacerea ta.',
+    url: 'https://www.synastdigital.com/ro/invitatie-exclusiva',
+    locale: 'ro_RO',
+    siteName: 'Synast Digital',
+    images: [
+      {
+        url: 'https://www.synastdigital.com/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Sigla Synast Digital',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Invitație exclusivă Synast Digital',
+    description: 'Află ce soluții personalizate am pregătit pentru afacerea ta.',
+    images: ['https://www.synastdigital.com/logo.png'],
+  },
 }
 
 export default function InvitatieExclusivaPage() {
