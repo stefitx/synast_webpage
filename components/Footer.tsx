@@ -12,6 +12,7 @@ export default function Footer() {
     contact: 'Contact',
     privacy: isRO ? 'Confidențialitate' : 'Privacy',
     knowUs: isRO ? 'Cunoaște-ne' : 'Get to know us',
+    faq: isRO ? 'Întrebări frecvente' : 'FAQ',
     getInTouch: isRO ? 'Contact' : 'Get in touch',
   }
   const knowUsHref = isRO ? '/ro/cunoaste-ne/' : '/get-to-know-us/'
@@ -28,6 +29,7 @@ export default function Footer() {
           <Link href={`${base}/contact/`} className="footer-link block">{labels.contact}</Link>
           <Link href={`${base}/privacy/`} className="footer-link block">{labels.privacy}</Link>
           <Link href={knowUsHref} className="footer-link block">{labels.knowUs}</Link>
+          <Link href={`${base}/#faq`} className="footer-link block">{labels.faq}</Link>
         </div>
         <div className="space-y-2">
           <div className="font-semibold">{labels.getInTouch}</div>
