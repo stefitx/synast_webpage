@@ -11,6 +11,28 @@ export const metadata: Metadata = {
     languages: { 'en-US': '/exclusive-invite', 'ro-RO': '/ro/invitatie-exclusiva' },
   },
   robots: { index: false, follow: true },
+  openGraph: {
+    title: 'Exclusive partnership invite — Synast Digital',
+    description:
+      'A private invitation outlining the growth opportunities Synast Digital has identified for your business.',
+    url: 'https://www.synastdigital.com/exclusive-invite',
+    locale: 'en_US',
+    siteName: 'Synast Digital',
+    images: [
+      {
+        url: 'https://www.synastdigital.com/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Synast Digital logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Exclusive partnership invite — Synast Digital',
+    description: 'Discover the growth opportunities we researched specifically for your business.',
+    images: ['https://www.synastdigital.com/logo.png'],
+  },
 }
 
 export default function ExclusiveInvitePage() {

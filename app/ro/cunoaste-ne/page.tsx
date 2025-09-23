@@ -10,6 +10,29 @@ export const metadata: Metadata = {
     canonical: '/ro/cunoaste-ne',
     languages: { 'en-US': '/get-to-know-us', 'ro-RO': '/ro/cunoaste-ne' },
   },
+  openGraph: {
+    title: 'Cunoaște echipa Synast Digital',
+    description:
+      'Descoperă cine suntem, cum colaborăm cu partenerii noștri și cum arată o experiență de lucru cu Synast Digital.',
+    url: 'https://www.synastdigital.com/ro/cunoaste-ne',
+    locale: 'ro_RO',
+    siteName: 'Synast Digital',
+    images: [
+      {
+        url: 'https://www.synastdigital.com/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Sigla Synast Digital',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cunoaște echipa Synast Digital',
+    description:
+      'Află cine suntem, cum lucrăm și valorile care ne ghidează fiecare proiect Synast Digital.',
+    images: ['https://www.synastdigital.com/logo.png'],
+  },
 }
 
 export default function CunoasteNePage() {

@@ -1,6 +1,34 @@
 import Section from '@/components/Section'
+import type { Metadata } from 'next'
 
-export const metadata = { title: 'Politica de confidențialitate — Synast Digital' }
+export const metadata: Metadata = {
+  title: 'Politica de confidențialitate — Synast Digital',
+  description:
+    'Află cum Synast Digital colectează, folosește și protejează datele personale și ce drepturi ai conform GDPR.',
+  alternates: { canonical: '/ro/privacy', languages: { 'en-US': '/privacy', 'ro-RO': '/ro/privacy' } },
+  openGraph: {
+    title: 'Politica de confidențialitate Synast Digital',
+    description:
+      'Înțelege practicile noastre de confidențialitate, obligațiile GDPR și modul în care poți face o solicitare legată de date.',
+    url: 'https://www.synastdigital.com/ro/privacy',
+    locale: 'ro_RO',
+    siteName: 'Synast Digital',
+    images: [
+      {
+        url: 'https://www.synastdigital.com/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Sigla Synast Digital',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Politica de confidențialitate Synast Digital',
+    description: 'Citește ce date prelucrăm, în ce scop și cum ne poți contacta pentru solicitări GDPR.',
+    images: ['https://www.synastdigital.com/logo.png'],
+  },
+}
 
 export default function PrivacyRO() {
   const updated = new Date().toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })
