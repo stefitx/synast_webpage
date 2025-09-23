@@ -15,6 +15,7 @@ export default function Navbar() {
         results: 'Rezultate',
         about: 'Despre',
         knowUs: 'Cunoaște-ne',
+        faq: 'Întrebări',
         ctaShort: 'Meeting',
         ctaLong: 'Programează un meeting',
       }
@@ -24,6 +25,7 @@ export default function Navbar() {
         results: 'Results',
         about: 'About',
         knowUs: 'Get to know us',
+        faq: 'FAQ',
         ctaShort: 'Discovery call',
         ctaLong: 'Book a discovery call',
       }
@@ -45,6 +47,7 @@ export default function Navbar() {
           <Link href={`${base}/#process`} className="footer-link">{labels.process}</Link>
           <Link href={`${base}/#results`} className="footer-link">{labels.results}</Link>
           <Link href={`${base}/#about`} className="footer-link">{labels.about}</Link>
+          <Link href={`${base}/#faq`} className="footer-link">{labels.faq}</Link>
           <Link href={knowUsHref} className="footer-link">
             {labels.knowUs}
           </Link>
@@ -55,18 +58,13 @@ export default function Navbar() {
           <Link href={isRO ? '/' : '/ro/'} className="footer-link text-sm md:text-base">
             {isRO ? 'EN' : 'RO'}
           </Link>
-		  <Link
-  href={`${base}/contact/`}
-  className="btn inline-flex rounded-xl px-3 py-2 text-sm whitespace-nowrap shadow-soft
-             md:rounded-2xl md:px-5 md:py-3 md:text-base
-             !bg-[#F6C000] hover:!bg-[#E0AE00]
-             !text-white hover:!text-white
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#E0AE00]"
->
-  <span className="md:hidden">{labels.ctaShort}</span>
-  <span className="hidden md:inline">{labels.ctaLong}</span>
-</Link>
-
+          <Link
+            href={`${base}/contact/`}
+            className="btn inline-flex rounded-xl px-3 py-2 text-sm whitespace-nowrap shadow-soft md:rounded-2xl md:px-5 md:py-3 md:text-base !bg-[#F6C000] hover:!bg-[#E0AE00] !text-white hover:!text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#E0AE00]"
+          >
+            <span className="md:hidden">{labels.ctaShort}</span>
+            <span className="hidden md:inline">{labels.ctaLong}</span>
+          </Link>
         </div>
       </div>
     </header>

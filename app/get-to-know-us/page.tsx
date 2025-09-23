@@ -10,6 +10,29 @@ export const metadata: Metadata = {
     canonical: '/get-to-know-us',
     languages: { 'en-US': '/get-to-know-us', 'ro-RO': '/ro/cunoaste-ne' },
   },
+  openGraph: {
+    title: 'Get to know Synast Digital',
+    description:
+      'Discover who we are, how we collaborate, and what it feels like to work with Synast Digital on marketing and automation.',
+    url: 'https://www.synastdigital.com/get-to-know-us',
+    locale: 'en_US',
+    siteName: 'Synast Digital',
+    images: [
+      {
+        url: 'https://www.synastdigital.com/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Synast Digital logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Get to know Synast Digital',
+    description:
+      'Meet the people shaping Synast Digital, our way of working, and the values that drive every partnership.',
+    images: ['https://www.synastdigital.com/logo.png'],
+  },
 }
 
 export default function GetToKnowUsPage() {

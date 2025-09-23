@@ -1,6 +1,34 @@
 import Section from '@/components/Section'
+import type { Metadata } from 'next'
 
-export const metadata = { title: 'Privacy Policy — Synast Digital' }
+export const metadata: Metadata = {
+  title: 'Privacy Policy — Synast Digital',
+  description:
+    'Learn how Synast Digital collects, processes, and protects personal data for marketing, automation, and contact interactions.',
+  alternates: { canonical: '/privacy', languages: { 'en-US': '/privacy', 'ro-RO': '/ro/privacy' } },
+  openGraph: {
+    title: 'Synast Digital Privacy Policy',
+    description:
+      'Understand Synast Digital’s privacy practices, GDPR commitments, and how to exercise your data rights.',
+    url: 'https://www.synastdigital.com/privacy',
+    locale: 'en_US',
+    siteName: 'Synast Digital',
+    images: [
+      {
+        url: 'https://www.synastdigital.com/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Synast Digital logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Synast Digital Privacy Policy',
+    description: 'Read about the data we process, why we process it, and how to contact us for GDPR requests.',
+    images: ['https://www.synastdigital.com/logo.png'],
+  },
+}
 
 export default function Privacy() {
   const updated = new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })
