@@ -34,7 +34,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/5">
       {/* Mobile: simple row; Desktop: 3-col grid keeps links centered */}
-      <div className="container flex items-center justify-between py-2 md:grid md:grid-cols-3 md:py-3">
+      <div className="container flex items-center justify-between py-2 md:grid md:grid-cols-[auto_1fr_auto] md:py-3">
         {/* Left: logo + wordmark */}
         <Link href={`${base || '/'}`} className="flex items-center gap-3 font-semibold">
           <Image src="/logo.png" alt="Synast Digital" width={26} height={26} className="rounded-sm" priority />
@@ -43,12 +43,12 @@ export default function Navbar() {
 
         {/* Center: section links (desktop/tablet only) */}
         <nav className="hidden md:flex justify-center gap-6">
-          <Link href={`${base}/#services`} className="footer-link">{labels.services}</Link>
-          <Link href={`${base}/#process`} className="footer-link">{labels.process}</Link>
-          <Link href={`${base}/#results`} className="footer-link">{labels.results}</Link>
-          <Link href={`${base}/#about`} className="footer-link">{labels.about}</Link>
-          <Link href={`${base}/#faq`} className="footer-link">{labels.faq}</Link>
-          <Link href={knowUsHref} className="footer-link">
+          <Link href={`${base}/#services`} className="footer-link whitespace-nowrap">{labels.services}</Link>
+          <Link href={`${base}/#process`} className="footer-link whitespace-nowrap">{labels.process}</Link>
+          <Link href={`${base}/#results`} className="footer-link whitespace-nowrap">{labels.results}</Link>
+          <Link href={`${base}/#about`} className="footer-link whitespace-nowrap">{labels.about}</Link>
+          <Link href={`${base}/#faq`} className="footer-link whitespace-nowrap">{labels.faq}</Link>
+          <Link href={knowUsHref} className="footer-link whitespace-nowrap">
             {labels.knowUs}
           </Link>
         </nav>
