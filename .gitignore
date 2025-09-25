@@ -6,3 +6,6 @@
 # misc
 .DS_Store
 .env*
+# ignore big videos
+video/
+*.mp4
