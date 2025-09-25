@@ -43,17 +43,14 @@ export default function InvitatieExclusivaPage() {
       <Section className="pt-24">
         <div className="mx-auto max-w-2xl text-center" lang="ro">
           <span className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-1 text-sm font-medium text-blue-700">
-            Invitație exclusivă
+            Dacă ești aici, ne-a mers schema!
           </span>
           <h1 className="mt-6 text-4xl font-semibold text-blue-900 md:text-5xl">
-            Un preambul la parteneriatul nostru
+            Hai să-ți explic cum te-am adus aici. 
           </h1>
-          <p className="mt-6 text-lg text-ink-600">
-            Ai fost selectat(ă) cu atenție să primești această invitație pentru că ne-am făcut temele despre afacerea ta și am identificat deja câteva moduri în care te putem ajuta să crești &mdash; gratuit. Tot ce trebuie să faci este să ne contactezi și îți povestim despre oportunitățile pe care le-am descoperit.
-          </p>
-          <p className="mt-6 text-ink-600">
-            Gândește-te la asta ca la un avans: venim pregătiți cu idei concrete, astfel încât prima discuție este despre impact, nu despre introduceri.
-          </p>
+		  <p className="mt-4 text-lg text-blue-700">
+			(Și cum putem folosi aceeași strategie în avantajul tău)
+		  </p>
         </div>
 
         {/* Video block (full width within a comfy max) */}
