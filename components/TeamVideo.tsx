@@ -11,14 +11,14 @@ const copy = {
   en: {
     placeholderTitle: 'Your intro video is on the way',
     placeholderBody:
-      'Upload your presentation to YouTube and set the NEXT_PUBLIC_TEAM_VIDEO_ID environment variable to the video ID (the characters after v= in the URL). The page will update automatically once the ID is in place.',
-    hint: 'The player uses YouTube\'s privacy-enhanced mode so cookies load only after someone presses play.',
+      'Coming soon: a video where we explain how we can help your business grow.',
+	hint: 'P.S. If you want to get in touch sooner, feel free to reach out via the contact form below.',
   },
   ro: {
     placeholderTitle: 'Videoclipul de prezentare va fi disponibil în curând',
-    placeholderBody:
-      'Încarcă prezentarea pe YouTube și setează variabila de mediu NEXT_PUBLIC_TEAM_VIDEO_ID cu ID-ul videoclipului (caracterele de după v= în link). Pagina se va actualiza automat când ID-ul este completat.',
-    hint: 'Playerul folosește modul YouTube cu confidențialitate sporită, astfel că modulele cookie apar doar după ce utilizatorul apasă play.',
+	placeholderBody:
+	  'În curând: un videoclip în care îți vom explica cum te putem ajuta să-ți crești afacerea.',
+	hint: 'P.S. Dacă dorești să iei legătura mai repede, nu ezita să ne contactezi prin formularul de mai jos.',
   },
 } as const satisfies Record<TeamVideoProps['locale'], { placeholderTitle: string; placeholderBody: string; hint: string }>
 
